@@ -1,0 +1,18 @@
+@import '../../../../../styles/variable';
+.category-list {
+    width: 100%;
+
+}
+
+.header-category {
+    display: flex;
+    justify-content: flex-end;
+    button {
+        color: #fff;
+        background-color: $btn-primary-color;
+        padding: 4px 10px;
+        border: 1px solid $btn-primary-color;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+}

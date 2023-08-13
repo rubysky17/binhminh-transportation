@@ -1,0 +1,21 @@
+@import '../../../styles/variable';
+
+.btn-menu-tab {
+    padding: 10px 14px;
+    cursor: pointer;
+    font-size: 14px;
+    background: #fff;
+    margin: 0 16px;
+    border-radius: 4px;
+    transition: all 0.3s;
+
+    &.active {
+        background: $primary-color;
+        color: #fff;
+    }
+
+    &:hover {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        transition: all 0.3s;
+    }
+}

@@ -1,0 +1,146 @@
+@import "../../../../../styles/variable";
+
+
+.wrapper-banner-block {
+  margin: auto;
+  background-image: url("https://w.ladicdn.com/636483c4cedf2b0012d770ab/bg-subtle-20230205081437-vx8sj.svg");
+
+  &_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+  padding: 60px;
+
+  border-radius: 8px;
+
+  &__image {
+    width: 50%;
+  }
+
+  &__content-text {
+    color: #ffffff;
+    width: 40%;
+
+    h2 {
+      font-size: 44px;
+      line-height: 1.2;
+      font-weight: bold;
+      color: rgb(255, 255, 255);
+    }
+  }
+
+  &__checklist {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgb(255, 255, 255);
+    text-align: left;
+
+    p {
+      width: 50%;
+      padding-right: 8px;
+      margin-top: 4px;
+    }
+
+    .mr-6 {
+      margin-right: 6px;
+    }
+  }
+
+  &__callbtn {
+    margin-top: 30px;
+    display: inline-block;
+    padding: 12px 20px;
+    background: #ffffff;
+    color: rgb(51, 204, 173);
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+
+    &:hover {
+      color: rgb(51, 204, 173);
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      transition: all 0.3s;
+    }
+
+    .mr-6 {
+      margin-right: 6px;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .wrapper-banner-block {
+    border-radius: unset !important;
+
+    &__image {
+      width: 50%;
+    }
+
+    &__content-text {
+      color: #ffffff;
+      width: 50%;
+
+      h2 {
+        font-size: 34px;
+        color: rgb(255, 255, 255);
+      }
+    }
+
+    &__checklist {
+      font-size: 14px;
+
+
+      p {
+        width: 50%;
+        margin-top: 4px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .content {
+    margin-top: 68px !important;
+  }
+
+  .wrapper-banner-block_content {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+
+  .wrapper-banner-block {
+    border-radius: unset !important;
+
+    &__image {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    &__content-text {
+      color: #ffffff;
+      width: 100%;
+
+      h2 {
+        font-size: 28px;
+        color: rgb(255, 255, 255);
+      }
+    }
+
+    &__checklist {
+      font-size: 16px;
+      justify-content: center;
+
+      p {
+        width: 100%;
+        margin-top: 4px;
+      }
+    }
+  }
+}

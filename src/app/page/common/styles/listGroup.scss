@@ -1,0 +1,94 @@
+@import '../../../../styles/variable';
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: var(--width-menu);
+  background: #ffffff;
+  text-align: center;
+
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  &__logo {
+    margin-top: 16px;
+
+    img {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &__list {
+    margin-top: 40px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 1.4rem;
+    transition: 0.25s;
+    height: 50px;
+    text-decoration: none;
+    padding: 20px;
+
+    &:hover {
+
+      & path {
+        stroke: $primary-color;
+      }
+
+      .menu__item-name {
+        color: $primary-color !important;
+      }
+    }
+
+    &-icon {
+      margin-right: 8px;
+      transition: all 0.3s;
+
+      & svg {
+        width: 2.4rem;
+        height: 2.4rem;
+      }
+
+      & path {
+        stroke: $secondary-color;
+      }
+    }
+
+    &-name {
+      color: $secondary-color;
+      font-size: 16px;
+      transition: all 0.3s;
+
+    }
+
+    &.active {
+      background-color: $primary-color;
+
+
+      & .menu__item-icon path {
+        stroke: #ffffff !important;
+      }
+
+      & .menu__item-name {
+        color: #ffffff !important;
+      }
+
+      &:hover {
+        & .menu__item-icon path {
+          stroke: #ffffff;
+        }
+
+        & .menu__item-name {
+          color: #ffffff;
+        }
+      }
+    }
+
+
+  }
+}

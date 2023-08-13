@@ -1,0 +1,79 @@
+.footer {
+  background-color: #e9e9e9;
+  padding: 1.6rem;
+  margin-top: 40px;
+  &-content {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 36px;
+    border-bottom: 1px solid #ccc;
+  }
+  &-title {
+    font-size: 1/8rem;
+    margin-bottom: 12px;
+    font-weight: 500;
+  }
+  &-text {
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0 8px;
+    margin-bottom: 12px;
+  }
+  &-social {
+    display: flex;
+    gap: 0 16px;
+  }
+  &-img {
+    width: 120px;
+  }
+}
+
+.copyright {
+  padding-top: 36px;
+  padding-bottom: 16px;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+// Responsive
+/* Mobile & tablet: width <1024px */
+@media only screen and (max-width: 63.9375em) {
+  .footer {
+    &-item {
+      margin-bottom: 20px;
+      :last-child {
+        margin-bottom: 0;
+      }
+    }
+    &-content {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    &-text,
+    &-title {
+      display: block;
+      text-align: center;
+    }
+    &-social {
+      justify-content: center;
+    }
+  }
+}
+
+/* Tablet: width >= 740px and width < 1024px */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+}
+
+/* Mobie: width < 740px */
+@media only screen and (max-width: 46.1875em) {
+}
+
+/* PC Low */
+@media (min-width: 1024px) and (max-width: 1239px) {
+}
+
+/* PC: width >= 1024px */
+@media only screen and (min-width: 64em) {
+}

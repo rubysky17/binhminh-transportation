@@ -1,0 +1,137 @@
+.product {
+  &-wrapper {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    .wrapper {
+      display: flex;
+      gap: 0 36px;
+    }
+  }
+  &-content {
+    width: 35%;
+  }
+  &-img__show {
+    height: 450px !important;
+    cursor: pointer;
+    width: 100% !important;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  &-sub__img {
+    height: 80px !important;
+    width: 80px !important;
+    cursor: pointer;
+    object-fit: cover;
+  }
+}
+
+.product-img__wrap .product-sub__img-slide {
+  opacity: 0.4;
+}
+
+.product-img__wrap .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.product-intro {
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+  &__desc {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+  }
+  &__contact {
+    font-size: 1.4rem;
+    span {
+      color: var(--primary-color);
+      font-weight: 500;
+    }
+  }
+}
+
+.btn-order {
+  margin-top: 20px;
+  height: 48px;
+  padding: 0 20px !important;
+  border-radius: 8px;
+  font-size: 1.6rem;
+  border: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-weight: 500;
+  transition: all linear 0.1s;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    opacity: 0.8;
+    color: #ffff;
+  }
+}
+
+// Responsive
+
+/* Mobile & tablet: width <1024px */
+@media only screen and (max-width: 63.9375em) {
+}
+
+/* Tablet: width >= 740px and width < 1024px */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+  .product {
+    &-wrapper {
+      margin: 24px;
+    }
+    &-content {
+      width: 45%;
+    }
+  }
+  .form-order {
+    width: 100% !important;
+    &__wrap {
+      flex-direction: column;
+      margin: 24px 24px 0 !important;
+      gap: 80px !important;
+    }
+  }
+}
+
+/* Mobie: width < 740px */
+@media only screen and (max-width: 46.1875em) {
+  .product {
+    &-wrapper {
+      margin: 12px;
+      .wrapper {
+        flex-direction: column;
+        gap: 40px;
+      }
+    }
+    &-content {
+      width: 100%;
+    }
+  }
+  .form-order {
+    width: 100% !important;
+    &__wrap {
+      margin: 12px 12px 0 !important;
+      flex-direction: column-reverse;
+      padding: 24px !important;
+    }
+  }
+  .btn-order {
+    width: 100%;
+  }
+}
+
+/* PC Low */
+@media (min-width: 1024px) and (max-width: 1239px) {
+}
+
+/* PC: width >= 1024px */
+@media only screen and (min-width: 64em) {
+}

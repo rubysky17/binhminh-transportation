@@ -1,0 +1,21 @@
+:root {
+  --primary-color: rgb(51, 204, 173);
+  --secondary-color: rgb(109, 108, 108);
+  --white-color: #fff;
+  --text-color: #808089;
+  --background-color: #f9f9f9;
+  --heading-color: #757575;
+  --title-color: #525050;
+  --title-small-color: #312f2f;
+  --title-big-color: #616161;
+  --new-primary-text: #212529;
+  --btn-primary-color: #3f51b5;
+  --navbar-width: 140px;
+  --navbar-height-tablet: 84px;
+  --navbar-height-mobile: 64px;
+}
+
+$primary-color: var(--primary-color);
+$secondary-color: var(--secondary-color);
+$btn-primary-color: var(--btn-primary-color);
+$secondary-text: var(--title-big-color);
