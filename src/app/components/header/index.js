@@ -10,7 +10,7 @@ import { HiChevronDown } from "react-icons/hi";
 import Popover from "../popover";
 
 import VI from "assets/images/vi.png";
-import KR from "assets/images/kr.png";
+import CN from "assets/images/cn.png";
 import US from "assets/images/us.png";
 
 import "./Header.scss";
@@ -37,7 +37,7 @@ const Header = () => {
     };
   });
 
-  const phoneString = "0582529925";
+  const phoneString = "0901191314";
 
   const languageList = [
     {
@@ -49,8 +49,8 @@ const Header = () => {
       img: US,
     },
     {
-      name: "kr",
-      img: KR,
+      name: "cn",
+      img: CN,
     },
   ];
 
@@ -122,7 +122,7 @@ const Header = () => {
 
               <button className="btn header-phone">
                 <a
-                  href="tel:0582529925"
+                  href="tel:0901191314"
                   className="header-nav__contact animate-pulse"
                 >
                   <span>

@@ -22,7 +22,12 @@ export const Footer = () => {
 
             <p className="footer-text">
               <BsTelephoneFill></BsTelephoneFill>
-              Hotline : <a href="tel:0865328664">058.252.9925</a>
+              Hotline : <a href="tel:0901191314">090.1191.314</a>
+            </p>
+            
+            <p className="footer-text">
+              <BsTelephoneFill></BsTelephoneFill>
+              Hotline : <a href="tel:0918868869">091.8868.869</a>
             </p>
           </div>
 
@@ -55,7 +60,7 @@ export const Footer = () => {
               </a>
 
               <a
-                href="https://chat.zalo.me/?phone=0582529925"
+                href="https://chat.zalo.me/?phone=0901191314"
                 target="_blank"
                 rel="noreferrer"
               >

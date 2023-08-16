@@ -9,13 +9,41 @@ import {
   HiUserCircle,
 } from "react-icons/hi";
 
+import { Swiper, SwiperSlide } from 'swiper/react'; 
+
 import "./styles.scss";
+import 'swiper/swiper.min.css';
 
 function IntroService() {
   const SERVICE_LIST = [
     {
       title: "Cho thuê xe ôtô",
-      imageLink: "https://thuexephuquoc.net/img/macbook-pro.png",
+      carousel: () => {
+        return  <Swiper
+        spaceBetween={50}
+        slidesPerView={1}
+      >
+        <SwiperSlide>
+          <img src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg" className="carousel-img"/>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <img src="https://www.buyrentkenya.com/discover/wp-content/uploads/2022/06/brk-blog-4reasons-why.png" className="carousel-img"/>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <img src="https://waynehomes.com/wp-content/uploads/2015/06/Cedar-Hill-Homestead-1.jpg" className="carousel-img"/>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <img src="https://assets.architecturaldigest.in/photos/62d66f2df8e893c06cec9970/16:9/w_1615,h_908,c_limit/This%20Hyderabad%20home%20marries%20French-style%20architecture%20with%20vernacular%20interiors.jpg" className="carousel-img"/>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <img src="https://robertelliotthomes.com/wp-content/uploads/2020/11/Luxury-homes-in-Dallas.jpg" className="carousel-img"/>
+        </SwiperSlide>
+      </Swiper>
+      },
       listItem: [
         {
           title: "Cho thuê ôtô",
@@ -24,9 +52,9 @@ function IntroService() {
           icon: <HiCurrencyDollar />,
         },
         {
-          title: "Cho thuê xe ô tô 4 - 7 chỗ",
+          title: "Cho thuê xe ô tô 4 - 45 chỗ",
           description:
-            "Nội thất xe sang trong nhằm tạo cho khách hàng cảm giác thoải mái.",
+            "Nội thất xe sang trọng nhằm tạo cho khách hàng cảm giác thoải mái.",
           icon: <HiCog />,
         },
         {
@@ -40,7 +68,32 @@ function IntroService() {
     },
     {
       title: "Cho thuê xe máy",
-      imageLink: "https://thuexephuquoc.net/img/iphone.png",
+      carousel: () => {
+        return  <Swiper
+        spaceBetween={50}
+        slidesPerView={1}
+      >
+        <SwiperSlide>
+          <img src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg" className="carousel-img"/>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <img src="https://www.buyrentkenya.com/discover/wp-content/uploads/2022/06/brk-blog-4reasons-why.png" className="carousel-img"/>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <img src="https://waynehomes.com/wp-content/uploads/2015/06/Cedar-Hill-Homestead-1.jpg" className="carousel-img"/>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <img src="https://assets.architecturaldigest.in/photos/62d66f2df8e893c06cec9970/16:9/w_1615,h_908,c_limit/This%20Hyderabad%20home%20marries%20French-style%20architecture%20with%20vernacular%20interiors.jpg" className="carousel-img"/>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <img src="https://robertelliotthomes.com/wp-content/uploads/2020/11/Luxury-homes-in-Dallas.jpg" className="carousel-img"/>
+        </SwiperSlide>
+      </Swiper>
+      },
       listItem: [
         {
           title: "Điều kiện thuê xe",
@@ -55,7 +108,7 @@ function IntroService() {
           icon: <HiAdjustments />,
         },
         {
-          title: "gia xe tận nơi theo yêu cầu",
+          title: "Giao xe tận nơi theo yêu cầu",
           description:
             "Dịch vụ giao xe nhanh, thủ tục cho thuê đơn giản, xe luôn luôn được kiểm tra thường xuyên hàng ngày, giá cả rẻ chất lượng không thay đổi, giao xe tại sân bay, bến tàu, khách sạn.",
           icon: <HiCheck />,
@@ -64,25 +117,50 @@ function IntroService() {
       position: "right",
     },
     {
-      title: "Cho thuê phòng trọ",
-      imageLink: "https://thuexephuquoc.net/img/iphone.png",
+      title: "Cho thuê khách sạn",
+      carousel: () => {
+        return  <Swiper
+        spaceBetween={50}
+        slidesPerView={1}
+      >
+        <SwiperSlide>
+          <img src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg" className="carousel-img"/>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <img src="https://www.buyrentkenya.com/discover/wp-content/uploads/2022/06/brk-blog-4reasons-why.png" className="carousel-img"/>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <img src="https://waynehomes.com/wp-content/uploads/2015/06/Cedar-Hill-Homestead-1.jpg" className="carousel-img"/>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <img src="https://assets.architecturaldigest.in/photos/62d66f2df8e893c06cec9970/16:9/w_1615,h_908,c_limit/This%20Hyderabad%20home%20marries%20French-style%20architecture%20with%20vernacular%20interiors.jpg" className="carousel-img"/>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <img src="https://robertelliotthomes.com/wp-content/uploads/2020/11/Luxury-homes-in-Dallas.jpg" className="carousel-img"/>
+        </SwiperSlide>
+      </Swiper>
+      },
       listItem: [
         {
           title: "Điều kiện thuê phòng",
           description:
-            "Chỉ cần hộ chiều hoặc CMND là bạn có thể sử hữu ngay 1 chiếc xe đẹp đi chơi thả ga vòng quanh Phú Quốc.",
+            "Chỉ cần hộ chiếu hoặc CMND và thủ tục thuê phòng cực kỳ đơn giản.",
           icon: <HiCheck />,
         },
         {
-          title: "Đa dạng các phòng",
+          title: "Đa dạng các dịch vụ",
           description:
-            "Chúng tôi cung cấp đầy đủ mẫu mã màu sắc các loại xe khác nhau của các hãng Honda, Yamaha,…",
+            "Chúng tôi cung cấp đầy đủ dịch vụ khách sạn từ phòng đơn đến phòng đôi v.v",
           icon: <HiCheck />,
         },
         {
           title: "Nội thất tiện nghi",
           description:
-            "Dịch vụ giao xe nhanh, thủ tục cho thuê đơn giản, xe luôn luôn được kiểm tra thường xuyên hàng ngày, giá cả rẻ chất lượng không thay đổi, giao xe tại sân bay, bến tàu, khách sạn.",
+            "Nội thất phòng khách sạn chất lượng cao, phong phú và đáp ứng đầy đủ mọi nhu cầu thiết yếu.",
           icon: <HiCheck />,
         },
       ],
@@ -108,7 +186,7 @@ function IntroService() {
             >
               {service.position === "right" && (
                 <div className="wrapper-card__image">
-                  <img src={service.imageLink} alt={service.imageLink} />
+                  {service.carousel()}
                 </div>
               )}
 
@@ -140,7 +218,7 @@ function IntroService() {
 
               {service.position === "left" && (
                 <div className="wrapper-card__image">
-                  <img src={service.imageLink} alt={service.imageLink} />
+                   {service.carousel()}
                 </div>
               )}
             </div>

@@ -105,6 +105,14 @@
 @media screen and (max-width: 992px) {
   .wrapper-card {
     flex-direction: column;
+
+    
+    
+      &__image {
+        width: 100%;
+        padding: 20px;
+      }
+    
   }
 
   .wrapper-card-right {
@@ -114,4 +122,23 @@
   .wrapper-card__text {
     width: 100%
   }
+}
+
+
+
+.carousel-img {
+  width: 100%;
+  max-height: 400px;
+  height: 400px;
+}
+
+@media screen and (max-width: 500px) {
+  
+.carousel-img {
+  width: 100%;
+  max-height: 230px;
+  height: 230px;
+}
+
+
 }
