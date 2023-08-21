@@ -9,40 +9,51 @@ import {
   HiUserCircle,
 } from "react-icons/hi";
 
-import { Swiper, SwiperSlide } from 'swiper/react'; 
+import { Swiper, SwiperSlide } from "swiper/react";
 
 import "./styles.scss";
-import 'swiper/swiper.min.css';
+import "swiper/swiper.min.css";
 
 function IntroService() {
   const SERVICE_LIST = [
     {
       title: "Cho thuê xe ôtô",
       carousel: () => {
-        return  <Swiper
-        spaceBetween={50}
-        slidesPerView={1}
-      >
-        <SwiperSlide>
-          <img src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg" className="carousel-img"/>
-        </SwiperSlide>
+        return (
+          <Swiper spaceBetween={50} slidesPerView={1}>
+            <SwiperSlide>
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/binhminh-transportation.appspot.com/o/categories%2Foto_1.jpg?alt=media&token=7567f345-6bb9-4a73-9f21-ae905ef78144"
+                className="carousel-img"
+                alt="oto 1"
+              />
+            </SwiperSlide>
 
-        <SwiperSlide>
-          <img src="https://www.buyrentkenya.com/discover/wp-content/uploads/2022/06/brk-blog-4reasons-why.png" className="carousel-img"/>
-        </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/binhminh-transportation.appspot.com/o/categories%2Foto_2.jpg?alt=media&token=7567f345-6bb9-4a73-9f21-ae905ef78144"
+                className="carousel-img"
+                alt="oto 2"
+              />
+            </SwiperSlide>
 
-        <SwiperSlide>
-          <img src="https://waynehomes.com/wp-content/uploads/2015/06/Cedar-Hill-Homestead-1.jpg" className="carousel-img"/>
-        </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/binhminh-transportation.appspot.com/o/categories%2Foto_3.jpg?alt=media&token=7567f345-6bb9-4a73-9f21-ae905ef78144"
+                className="carousel-img"
+                alt="oto 3"
+              />
+            </SwiperSlide>
 
-        <SwiperSlide>
-          <img src="https://assets.architecturaldigest.in/photos/62d66f2df8e893c06cec9970/16:9/w_1615,h_908,c_limit/This%20Hyderabad%20home%20marries%20French-style%20architecture%20with%20vernacular%20interiors.jpg" className="carousel-img"/>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <img src="https://robertelliotthomes.com/wp-content/uploads/2020/11/Luxury-homes-in-Dallas.jpg" className="carousel-img"/>
-        </SwiperSlide>
-      </Swiper>
+            <SwiperSlide>
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/binhminh-transportation.appspot.com/o/categories%2Foto_4.jpg?alt=media&token=7567f345-6bb9-4a73-9f21-ae905ef78144"
+                className="carousel-img"
+                alt="oto 4"
+              />
+            </SwiperSlide>
+          </Swiper>
+        );
       },
       listItem: [
         {
@@ -69,30 +80,55 @@ function IntroService() {
     {
       title: "Cho thuê xe máy",
       carousel: () => {
-        return  <Swiper
-        spaceBetween={50}
-        slidesPerView={1}
-      >
-        <SwiperSlide>
-          <img src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg" className="carousel-img"/>
-        </SwiperSlide>
+        return (
+          <Swiper spaceBetween={50} slidesPerView={1}>
+            <SwiperSlide>
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/binhminh-transportation.appspot.com/o/categories%2Fhome_1.jpg?alt=media&token=a140ec69-22fb-4630-8061-967aa4c71e4e"
+                className="carousel-img"
+                alt="home 1"
+              />
+            </SwiperSlide>
 
-        <SwiperSlide>
-          <img src="https://www.buyrentkenya.com/discover/wp-content/uploads/2022/06/brk-blog-4reasons-why.png" className="carousel-img"/>
-        </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/binhminh-transportation.appspot.com/o/categories%2Fhome_2.jpg?alt=media&token=a140ec69-22fb-4630-8061-967aa4c71e4e"
+                className="carousel-img"
+                alt="home 2"
+              />
+            </SwiperSlide>
 
-        <SwiperSlide>
-          <img src="https://waynehomes.com/wp-content/uploads/2015/06/Cedar-Hill-Homestead-1.jpg" className="carousel-img"/>
-        </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src="https://waynehomes.com/wp-content/uploads/2015/06/Cedar-Hill-Homestead-1.jpg"
+                className="carousel-img"
+              />
+            </SwiperSlide>
 
-        <SwiperSlide>
-          <img src="https://assets.architecturaldigest.in/photos/62d66f2df8e893c06cec9970/16:9/w_1615,h_908,c_limit/This%20Hyderabad%20home%20marries%20French-style%20architecture%20with%20vernacular%20interiors.jpg" className="carousel-img"/>
-        </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/binhminh-transportation.appspot.com/o/categories%2Fhome_3.jpg?alt=media&token=a140ec69-22fb-4630-8061-967aa4c71e4e"
+                className="carousel-img"
+                alt="home 3"
+              />
+            </SwiperSlide>
 
-        <SwiperSlide>
-          <img src="https://robertelliotthomes.com/wp-content/uploads/2020/11/Luxury-homes-in-Dallas.jpg" className="carousel-img"/>
-        </SwiperSlide>
-      </Swiper>
+            <SwiperSlide>
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/binhminh-transportation.appspot.com/o/categories%2Fhome_4.jpg?alt=media&token=a140ec69-22fb-4630-8061-967aa4c71e4e"
+                className="carousel-img"
+                alt="home 4"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/binhminh-transportation.appspot.com/o/categories%2Fhome_5.jpg?alt=media&token=a140ec69-22fb-4630-8061-967aa4c71e4e"
+                className="carousel-img"
+                alt="home 5"
+              />
+            </SwiperSlide>
+          </Swiper>
+        );
       },
       listItem: [
         {
@@ -119,30 +155,48 @@ function IntroService() {
     {
       title: "Cho thuê khách sạn",
       carousel: () => {
-        return  <Swiper
-        spaceBetween={50}
-        slidesPerView={1}
-      >
-        <SwiperSlide>
-          <img src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg" className="carousel-img"/>
-        </SwiperSlide>
+        return (
+          <Swiper spaceBetween={50} slidesPerView={1}>
+            <SwiperSlide>
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/binhminh-transportation.appspot.com/o/categories%2Fhome_1.jpg?alt=media&token=a140ec69-22fb-4630-8061-967aa4c71e4e"
+                className="carousel-img"
+                alt="home 1"
+              />
+            </SwiperSlide>
 
-        <SwiperSlide>
-          <img src="https://www.buyrentkenya.com/discover/wp-content/uploads/2022/06/brk-blog-4reasons-why.png" className="carousel-img"/>
-        </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/binhminh-transportation.appspot.com/o/categories%2Fhome_2.jpg?alt=media&token=a140ec69-22fb-4630-8061-967aa4c71e4e"
+                className="carousel-img"
+                alt="home 2"
+              />
+            </SwiperSlide>
 
-        <SwiperSlide>
-          <img src="https://waynehomes.com/wp-content/uploads/2015/06/Cedar-Hill-Homestead-1.jpg" className="carousel-img"/>
-        </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/binhminh-transportation.appspot.com/o/categories%2Fhome_3.jpg?alt=media&token=a140ec69-22fb-4630-8061-967aa4c71e4e"
+                className="carousel-img"
+                alt="home 3"
+              />
+            </SwiperSlide>
 
-        <SwiperSlide>
-          <img src="https://assets.architecturaldigest.in/photos/62d66f2df8e893c06cec9970/16:9/w_1615,h_908,c_limit/This%20Hyderabad%20home%20marries%20French-style%20architecture%20with%20vernacular%20interiors.jpg" className="carousel-img"/>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <img src="https://robertelliotthomes.com/wp-content/uploads/2020/11/Luxury-homes-in-Dallas.jpg" className="carousel-img"/>
-        </SwiperSlide>
-      </Swiper>
+            <SwiperSlide>
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/binhminh-transportation.appspot.com/o/categories%2Fhome_4.jpg?alt=media&token=a140ec69-22fb-4630-8061-967aa4c71e4e"
+                className="carousel-img"
+                alt="home 4"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/binhminh-transportation.appspot.com/o/categories%2Fhome_5.jpg?alt=media&token=a140ec69-22fb-4630-8061-967aa4c71e4e"
+                className="carousel-img"
+                alt="home 5"
+              />
+            </SwiperSlide>
+          </Swiper>
+        );
       },
       listItem: [
         {
@@ -185,9 +239,7 @@ function IntroService() {
               key={`${index}`}
             >
               {service.position === "right" && (
-                <div className="wrapper-card__image">
-                  {service.carousel()}
-                </div>
+                <div className="wrapper-card__image">{service.carousel()}</div>
               )}
 
               <div className="wrapper-card__text">
@@ -217,9 +269,7 @@ function IntroService() {
               </div>
 
               {service.position === "left" && (
-                <div className="wrapper-card__image">
-                   {service.carousel()}
-                </div>
+                <div className="wrapper-card__image">{service.carousel()}</div>
               )}
             </div>
           );
