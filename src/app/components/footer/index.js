@@ -16,18 +16,14 @@ export const Footer = () => {
 
             <p className="footer-text">
               <HiLocationMarker></HiLocationMarker>
-              65/23 Chùa Láng, Phường Phước Thạnh, Huyện Bình Chánh, Hồ Chí
-              Minh, Việt Nam
+              68 Trần Phú, Khu phố 6, Thị trấn Dương Đông, Thành phố Phú Quốc,
+              Tỉnh Kiên Giang
             </p>
 
             <p className="footer-text">
               <BsTelephoneFill></BsTelephoneFill>
-              Hotline : <a href="tel:0901191314">090.1191.314</a>
-            </p>
-            
-            <p className="footer-text">
-              <BsTelephoneFill></BsTelephoneFill>
-              Hotline : <a href="tel:0918868869">091.8868.869</a>
+              Hotline : <a href="tel:0901191314">090.1191.314</a> -{" "}
+              <a href="tel:0918868869">091.8868.869</a>
             </p>
           </div>
 

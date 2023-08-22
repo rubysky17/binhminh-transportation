@@ -98,7 +98,7 @@ const Header = () => {
                 </NavLink>
               </li>
 
-              <li className="header-nav__item">
+              {/* <li className="header-nav__item">
                 <NavLink
                   className="header-title"
                   to="/gioi-thieu"
@@ -107,7 +107,7 @@ const Header = () => {
                 >
                   Giới thiệu
                 </NavLink>
-              </li>
+              </li> */}
 
               <li className="header-nav__item">
                 <NavLink

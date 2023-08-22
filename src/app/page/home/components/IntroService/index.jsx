@@ -84,7 +84,7 @@ function IntroService() {
           <Swiper spaceBetween={50} slidesPerView={1}>
             <SwiperSlide>
               <img
-                src="https://firebasestorage.googleapis.com/v0/b/binhminh-transportation.appspot.com/o/categories%2Fhome_1.jpg?alt=media&token=a140ec69-22fb-4630-8061-967aa4c71e4e"
+                src="https://firebasestorage.googleapis.com/v0/b/binhminh-transportation.appspot.com/o/categories%2Fxemay_1.jpeg?alt=media&token=7b66eae1-e051-488f-accc-0b74fadcd597"
                 className="carousel-img"
                 alt="home 1"
               />
@@ -92,7 +92,7 @@ function IntroService() {
 
             <SwiperSlide>
               <img
-                src="https://firebasestorage.googleapis.com/v0/b/binhminh-transportation.appspot.com/o/categories%2Fhome_2.jpg?alt=media&token=a140ec69-22fb-4630-8061-967aa4c71e4e"
+                src="https://firebasestorage.googleapis.com/v0/b/binhminh-transportation.appspot.com/o/categories%2Fxemay_2.jpeg?alt=media&token=7b66eae1-e051-488f-accc-0b74fadcd597"
                 className="carousel-img"
                 alt="home 2"
               />
@@ -100,14 +100,15 @@ function IntroService() {
 
             <SwiperSlide>
               <img
-                src="https://waynehomes.com/wp-content/uploads/2015/06/Cedar-Hill-Homestead-1.jpg"
+                src="https://firebasestorage.googleapis.com/v0/b/binhminh-transportation.appspot.com/o/categories%2Fxemay_3.png?alt=media&token=7b66eae1-e051-488f-accc-0b74fadcd597"
                 className="carousel-img"
+                alt="home 2"
               />
             </SwiperSlide>
 
             <SwiperSlide>
               <img
-                src="https://firebasestorage.googleapis.com/v0/b/binhminh-transportation.appspot.com/o/categories%2Fhome_3.jpg?alt=media&token=a140ec69-22fb-4630-8061-967aa4c71e4e"
+                src="https://firebasestorage.googleapis.com/v0/b/binhminh-transportation.appspot.com/o/categories%2Fxemay_4.jpeg?alt=media&token=7b66eae1-e051-488f-accc-0b74fadcd597"
                 className="carousel-img"
                 alt="home 3"
               />
@@ -115,16 +116,9 @@ function IntroService() {
 
             <SwiperSlide>
               <img
-                src="https://firebasestorage.googleapis.com/v0/b/binhminh-transportation.appspot.com/o/categories%2Fhome_4.jpg?alt=media&token=a140ec69-22fb-4630-8061-967aa4c71e4e"
+                src="https://firebasestorage.googleapis.com/v0/b/binhminh-transportation.appspot.com/o/categories%2Fxemay_5.png?alt=media&token=7b66eae1-e051-488f-accc-0b74fadcd597"
                 className="carousel-img"
                 alt="home 4"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src="https://firebasestorage.googleapis.com/v0/b/binhminh-transportation.appspot.com/o/categories%2Fhome_5.jpg?alt=media&token=a140ec69-22fb-4630-8061-967aa4c71e4e"
-                className="carousel-img"
-                alt="home 5"
               />
             </SwiperSlide>
           </Swiper>
@@ -225,6 +219,7 @@ function IntroService() {
   return (
     <div className="wrapper-service">
       <h2 className="wrapper-service__title">Giới thiệu</h2>
+
       <h3 className="wrapper-service__subtitle">
         Dịch vụ cho thuê xe tham quan và nơi ở tại Phú Quốc
       </h3>
