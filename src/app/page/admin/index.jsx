@@ -55,14 +55,15 @@ function Admin() {
 
   return (
     <>
-      <Redirect to="/admin/danh-sach" component={AllProducts} />
+      <Redirect to="/quan-tri/danh-sach" component={AllProducts} />
 
       <main className=" container-admin">
         <ListGroup />
 
         <Switch>
           <Route
-            path="/admin/khach-hang"
+            path="/quan-tri/khach-hang"
+            exact
             render={(props) => (
               <TableOrder
                 heading={"Khách hàng"}
@@ -74,10 +75,11 @@ function Admin() {
             )}
           />
 
-          <Route path="/admin/dich-vu" component={Category} />
+          <Route path="/quan-tri/dich-vu" exact component={Category} />
 
           <Route
-            path="/admin/danh-sach"
+            path="/quan-tri/danh-sach"
+            exact
             render={(props) => (
               <AllProducts
                 products={productList}

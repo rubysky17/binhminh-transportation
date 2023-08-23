@@ -10,17 +10,17 @@ const menuList = [
   {
     name: "Danh sách",
     icon: icons.iconProduct,
-    pathLink: "/admin/danh-sach",
+    pathLink: "/quan-tri/danh-sach",
   },
   {
     name: "Khách hàng",
     icon: icons.iconOder,
-    pathLink: "/admin/khach-hang",
+    pathLink: "/quan-tri/khach-hang",
   },
   {
     name: "Dịch vụ",
     icon: icons.iconOder,
-    pathLink: "/admin/dich-vu",
+    pathLink: "/quan-tri/dich-vu",
   },
 ];
 

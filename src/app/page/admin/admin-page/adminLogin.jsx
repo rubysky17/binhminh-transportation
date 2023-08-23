@@ -20,7 +20,7 @@ function AdminLogin() {
       userAcount.username === "trangxinhgai" &&
       userAcount.password === "trangxinhgai"
     ) {
-      history.push("/admin/tat-ca-san-pham");
+      history.push("/quan-tri/tat-ca-san-pham");
     }
   };
 

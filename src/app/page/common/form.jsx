@@ -131,7 +131,7 @@ function FormComponent({ heading }) {
 
   const cancelModal = () => {
     setDataSubmit({});
-    history.push("/admin/danh-sach");
+    history.push("/quan-tri/danh-sach");
   };
 
   return (

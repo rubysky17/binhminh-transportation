@@ -47,7 +47,7 @@ function App() {
         <PublicPage path="/dich-vu/:categoryId" Component={Products} />
 
         {/* Trang admin */}
-        <PrivatePage path="/admin" component={Admin} />
+        <PrivatePage path="/quan-tri" component={Admin} />
 
         {/* Nếu tất cả các path trên không đủng nhảy vào not found page */}
         <Route path="*" component={NotFound} />

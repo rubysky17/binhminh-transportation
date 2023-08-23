@@ -148,20 +148,29 @@ const Header = () => {
                 handleTogglePopOver();
               }}
             >
-              {languageList.map((lang, idx) => {
-                return (
-                  <>
-                    {language === lang.name && (
-                      <img src={lang.img} alt="ngôn ngữ anguages" key={idx} />
-                    )}
-                  </>
-                );
-              })}
+              {language ? (
+                <>
+                  {languageList.map((lang, idx) => {
+                    return (
+                      <>
+                        {language === lang.name && (
+                          <img
+                            src={lang.img}
+                            alt="ngôn ngữ anguages"
+                            key={idx}
+                          />
+                        )}
+                      </>
+                    );
+                  })}
+                </>
+              ) : (
+                <img src={VI} alt="ngôn ngữ anguages" />
+              )}
 
               <span>
                 <HiChevronDown />
               </span>
-
               <Popover
                 isOpen={isOpenPopOver}
                 onClose={() => {

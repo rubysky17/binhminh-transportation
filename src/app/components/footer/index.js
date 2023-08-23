@@ -22,8 +22,8 @@ export const Footer = () => {
 
             <p className="footer-text">
               <BsTelephoneFill></BsTelephoneFill>
-              Hotline : <a href="tel:0901191314">090.1191.314</a> -{" "}
-              <a href="tel:0918868869">091.8868.869</a>
+              Hotline : <a href="tel:0901191314">0901.19.13.14</a> -{" "}
+              <a href="tel:0918868869">0918.868.869</a>
             </p>
           </div>
 
