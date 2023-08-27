@@ -23,8 +23,8 @@ function Admin() {
   const columns = {
     order: [
       { value: "customer", label: "Tên khách hàng" },
-      { value: "products", label: "Sản phẩm" },
-      { value: "quantity", label: "Số lượng" },
+      { value: "products", label: "Số điện thoại" },
+      { value: "quantity", label: "Loại hình dịch vụ" },
       { value: "date", label: "Ngày gửi" },
       { value: "action", label: "Thao tác" },
     ],
@@ -63,7 +63,6 @@ function Admin() {
         <Switch>
           <Route
             path="/quan-tri/khach-hang"
-            exact
             render={(props) => (
               <TableOrder
                 heading={"Khách hàng"}
@@ -75,11 +74,10 @@ function Admin() {
             )}
           />
 
-          <Route path="/quan-tri/dich-vu" exact component={Category} />
+          <Route path="/quan-tri/dich-vu" component={Category} />
 
           <Route
             path="/quan-tri/danh-sach"
-            exact
             render={(props) => (
               <AllProducts
                 products={productList}

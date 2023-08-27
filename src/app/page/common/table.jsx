@@ -14,7 +14,7 @@ function Table(props) {
 
       <div className="action-table  d-flex justify-content-end">
         <button className="product-btn-create">
-          <Link to="/quan-tri/danh-sach/them-san-pham">
+          <Link to="/quan-tri/danh-sach/them">
             <span>Thêm</span>
           </Link>
         </button>

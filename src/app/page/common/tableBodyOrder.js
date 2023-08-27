@@ -2,12 +2,17 @@ import { deleteOrderAction } from "core/redux/actions/userActions";
 import React from "react";
 import { useDispatch } from "react-redux";
 import Delete from "./delete";
+import moment from "moment";
 
 export default function TableBodyOrder({ data }) {
   const dispatch = useDispatch();
   const handleDelete = (item) => {
     dispatch(deleteOrderAction(item.id));
   };
+
+  console.log({
+    data,
+  });
   return (
     <>
       {data?.map((item, index) => {
@@ -27,7 +32,7 @@ export default function TableBodyOrder({ data }) {
                 width: "40%",
               }}
             >
-              <p>{item?.product.title}</p>
+              <p>{item?.phone}</p>
             </td>
             <td
               className="value-column w-40"
@@ -35,16 +40,18 @@ export default function TableBodyOrder({ data }) {
                 width: "40%",
               }}
             >
-              <p>{item?.quantity}</p>
+              <p>{item?.quantity || "---"}</p>
             </td>
+
             <td
               className="value-column w-40"
               style={{
                 width: "40%",
               }}
             >
-              <p>{item?.date}</p>
+              <p>{moment(item?.date).format("DD/MM/YYYY")}</p>
             </td>
+
             <td
               className="value-column"
               style={{

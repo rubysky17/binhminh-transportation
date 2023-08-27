@@ -16,7 +16,8 @@ const AllProducts = ({ products, columns, products: data }) => {
 
       <Switch>
         <Route
-          path="/quan-tri/danh-sach/them-san-pham"
+          path="/quan-tri/danh-sach/them"
+          exact
           render={(props) => (
             <Modal
               products={products}

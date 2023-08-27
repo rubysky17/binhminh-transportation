@@ -9,11 +9,15 @@ const schemeValidation = yup.object({
   name: yup
     .string()
     .required("Vui lòng nhập tên của bạn")
-    .min(5, "Vui lòng nhập tối thiểu 5 kí tự"),
+    .min(3, "Vui lòng nhập tối thiểu 3 kí tự"),
   phone: yup
     .string()
     .required("Vui lòng nhập số điện thoại của bạn")
-    .min(10, "Vui lòng nhập tối thiểu 10 kí tự"),
+    .matches(
+      /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/,
+      "Vui lòng nhập đúng định dạng"
+    )
+    .min(1, "Vui lòng nhập số điện thoại của bạn"),
   // email: yup.string().email("Vui lòng nhập email của bạn"),
 });
 
@@ -50,8 +54,6 @@ const ProductForm = (props) => {
       {showNotifi && <ToastForm></ToastForm>}
 
       <section id="from-order" className="form-order__wrap">
-        <div className="form-img">{svgImage}</div>
-
         <form
           autoComplete="off"
           onSubmit={handleSubmit(submit)}
@@ -76,6 +78,7 @@ const ProductForm = (props) => {
               {...register("phone")}
               id="phone"
               placeholder="Vui lòng nhập số điện thoại của bạn"
+              type="tel"
             />
 
             <span>{errors.phone?.message}</span>
