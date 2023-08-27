@@ -1,4 +1,5 @@
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 import useTranslation from "hooks/useTranslate/useTranslation";
 import { formatNumber } from "helpers/helpers";
@@ -12,7 +13,19 @@ function CardService(props) {
   return (
     <div className="wrapper-card-service">
       <div className="wrapper-card-service__image">
-        <img src={img[0]} alt="src_image" />
+        {img.length >= 2 ? (
+          <Swiper spaceBetween={50} slidesPerView={1}>
+            {img.map((src, index) => {
+              return (
+                <SwiperSlide key={index}>
+                  <img src={src} className="carousel-img" alt="oto 2" />
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+        ) : (
+          <img src={img[0]} alt="src_image" />
+        )}
       </div>
 
       <div className="wrapper-card-service__text">
@@ -21,7 +34,7 @@ function CardService(props) {
         <p className="wrapper-card-service__text-info">{content}</p>
 
         <p className="wrapper-card-service__text-price">
-          Giá: {formatNumber(price)}/{t(unit)}
+          Giá chỉ từ: {formatNumber(price)} {`VNĐ`}/{t(unit)}
         </p>
       </div>
     </div>

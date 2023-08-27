@@ -87,7 +87,7 @@ function TableBody({ data }) {
                   title="Click để Sửa"
                 >
                   <Link
-                    to={`/admin/danh-sach/sua-san-pham/${item.id}`}
+                    to={`/quan-tri/danh-sach/sua-san-pham/${item.id}`}
                     className="btn-edit"
                   >
                     <i className="fa fa-pen-to-square"></i>
