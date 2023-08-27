@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 import ProductForm from "./productForm/productForm";
 import { Toasts } from "../common/toasts/toasts";
@@ -14,8 +14,8 @@ function ProductDetail() {
   const { id } = useParams();
   const history = useHistory();
   const dispatch = useDispatch();
-  const { editProduct } = useSelector((state) => state.product);
-  const { isValid } = useSelector((state) => state.user);
+  // const { editProduct } = useSelector((state) => state.product);
+  // const { isValid } = useSelector((state) => state.user);
 
   useEffect(() => {
     dispatch(getDetailProductAction(id));
@@ -23,27 +23,27 @@ function ProductDetail() {
   }, [id]);
 
   function handleOrder(value) {
-    console.log({ value });
-    const DEFAULT_PRODUCT = {
-      id: "",
-      title: "",
-      content: "",
-      img: [],
-    };
+    // console.log({ value });
+    // const DEFAULT_PRODUCT = {
+    //   id: "",
+    //   title: "",
+    //   content: "",
+    //   img: [],
+    // };
 
     const buildFormSubmit = {
       name: "",
       phone: "",
-      address: "",
-      product: DEFAULT_PRODUCT,
-      quantity: 0,
+      // address: "",
+      // product: DEFAULT_PRODUCT,
+      // quantity: 0,
       date: Date.now(),
     };
 
     const payload = {
       ...buildFormSubmit,
       ...value,
-      product: editProduct,
+      // product: editProduct,
     };
 
     dispatch(addOrderAction(payload));

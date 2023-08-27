@@ -83,10 +83,10 @@ function ServiceComponent() {
         <h3 className="wrapper-service__subtitle">Tiết kiệm đến 50%</h3>
 
         {isLoadingMenu ? (
-          <p>Đang tải</p>
+          <h2>Đang tải</h2>
         ) : (
           <>
-            <div className={`mb-4 d-flex justify-content-center`}>
+            <div className={`mb-4 justify-content-center bm-wrapper-menu`}>
               {menu.map((item, idx) => {
                 return (
                   <div
@@ -111,7 +111,10 @@ function ServiceComponent() {
                     .fill(0)
                     .map((item, idx) => {
                       return (
-                        <div className="col-4" key={`${idx}`}>
+                        <div
+                          className="col-12 col-lg-4 col-sm-6 mb-3"
+                          key={`${idx}`}
+                        >
                           <LoadingSkeletonItem />
                         </div>
                       );
@@ -122,7 +125,7 @@ function ServiceComponent() {
               <div className="row">
                 {serviceList.map((item, idx) => {
                   return (
-                    <div className="col-12  col-lg-4 col-sm-6" key={`${idx}`}>
+                    <div className="col-12 col-lg-4 col-sm-6" key={`${idx}`}>
                       <CardService {...item} />
                     </div>
                   );

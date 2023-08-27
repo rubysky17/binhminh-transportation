@@ -10,11 +10,13 @@
     justify-content: center;
     gap: 0 40px;
   }
+
   &__title {
     font-size: 2.4rem;
     font-weight: 600;
     margin-bottom: 20px;
   }
+
   &__item {
     display: flex;
     flex-direction: column;
@@ -78,6 +80,7 @@
     border-radius: 8px;
     font-weight: bold;
     transition: all 0.1s linear;
+
     &:hover {
       opacity: 0.75;
     }
@@ -104,4 +107,19 @@
 
 .wrapper-form {
   margin-top: 40px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .form-order__wrap {
+    display: block;
+
+    .form-order {
+      width: 100%;
+    }
+
+    .form-img {
+      display: none;
+    }
+  }
 }

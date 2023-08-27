@@ -5,7 +5,7 @@ const IconContact = () => {
   return (
     <>
       <a
-        href="https://chat.zalo.me/?phone=0901191314"
+        href="https://zalo.me/0911191314"
         id="linkzalo"
         target="_blank"
         rel="noopener noreferrer"

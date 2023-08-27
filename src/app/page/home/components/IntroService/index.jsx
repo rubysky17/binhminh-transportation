@@ -23,14 +23,6 @@ function IntroService() {
           <Swiper spaceBetween={50} slidesPerView={1}>
             <SwiperSlide>
               <img
-                src="https://firebasestorage.googleapis.com/v0/b/binhminh-transportation.appspot.com/o/categories%2Foto_1.jpg?alt=media&token=7567f345-6bb9-4a73-9f21-ae905ef78144"
-                className="carousel-img"
-                alt="oto 1"
-              />
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <img
                 src="https://firebasestorage.googleapis.com/v0/b/binhminh-transportation.appspot.com/o/categories%2Foto_2.jpg?alt=media&token=7567f345-6bb9-4a73-9f21-ae905ef78144"
                 className="carousel-img"
                 alt="oto 2"
@@ -50,6 +42,14 @@ function IntroService() {
                 src="https://firebasestorage.googleapis.com/v0/b/binhminh-transportation.appspot.com/o/categories%2Foto_4.jpg?alt=media&token=7567f345-6bb9-4a73-9f21-ae905ef78144"
                 className="carousel-img"
                 alt="oto 4"
+              />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/binhminh-transportation.appspot.com/o/categories%2Foto_1.jpg?alt=media&token=7567f345-6bb9-4a73-9f21-ae905ef78144"
+                className="carousel-img"
+                alt="oto 1"
               />
             </SwiperSlide>
           </Swiper>
@@ -84,6 +84,14 @@ function IntroService() {
           <Swiper spaceBetween={50} slidesPerView={1}>
             <SwiperSlide>
               <img
+                src="https://firebasestorage.googleapis.com/v0/b/binhminh-transportation.appspot.com/o/categories%2Fxemay_3.png?alt=media&token=7b66eae1-e051-488f-accc-0b74fadcd597"
+                className="carousel-img"
+                alt="home 2"
+              />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <img
                 src="https://firebasestorage.googleapis.com/v0/b/binhminh-transportation.appspot.com/o/categories%2Fxemay_1.jpeg?alt=media&token=7b66eae1-e051-488f-accc-0b74fadcd597"
                 className="carousel-img"
                 alt="home 1"
@@ -93,14 +101,6 @@ function IntroService() {
             <SwiperSlide>
               <img
                 src="https://firebasestorage.googleapis.com/v0/b/binhminh-transportation.appspot.com/o/categories%2Fxemay_2.jpeg?alt=media&token=7b66eae1-e051-488f-accc-0b74fadcd597"
-                className="carousel-img"
-                alt="home 2"
-              />
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <img
-                src="https://firebasestorage.googleapis.com/v0/b/binhminh-transportation.appspot.com/o/categories%2Fxemay_3.png?alt=media&token=7b66eae1-e051-488f-accc-0b74fadcd597"
                 className="carousel-img"
                 alt="home 2"
               />

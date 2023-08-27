@@ -31,7 +31,7 @@ export const Footer = () => {
             <h3 className="footer-title">Theo dõi chúng tôi trên</h3>
 
             <div className="footer-social">
-              <a
+              {/* <a
                 href="https://www.facebook.com/manhdat10998/"
                 target="_blank"
                 rel="noreferrer"
@@ -53,10 +53,10 @@ export const Footer = () => {
                     fill="white"
                   ></path>
                 </svg>
-              </a>
+              </a> */}
 
               <a
-                href="https://chat.zalo.me/?phone=0901191314"
+                href="https://zalo.me/0911191314"
                 target="_blank"
                 rel="noreferrer"
               >

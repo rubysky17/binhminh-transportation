@@ -19,3 +19,17 @@
         transition: all 0.3s;
     }
 }
+
+.bm-wrapper-menu {
+    display: flex !important
+}
+
+@media screen and (max-width: 400px) {
+    .bm-wrapper-menu {
+        display: block !important;
+
+        .btn-menu-tab {
+            margin-bottom: 10px;
+        }
+    }
+}
