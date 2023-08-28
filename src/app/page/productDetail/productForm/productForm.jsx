@@ -4,25 +4,28 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import ToastForm from "app/components/toastForm/ToastForm";
-
-const schemeValidation = yup.object({
-  name: yup
-    .string()
-    .required("Vui lòng nhập tên của bạn")
-    .min(3, "Vui lòng nhập tối thiểu 3 kí tự"),
-  phone: yup
-    .string()
-    .required("Vui lòng nhập số điện thoại của bạn")
-    .matches(
-      /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/,
-      "Vui lòng nhập đúng định dạng"
-    )
-    .min(1, "Vui lòng nhập số điện thoại của bạn"),
-  // email: yup.string().email("Vui lòng nhập email của bạn"),
-});
+import useTranslation from "hooks/useTranslate/useTranslation";
 
 const ProductForm = (props) => {
   const [showNotifi, setShowNotifi] = useState(false);
+
+  const { t } = useTranslation();
+
+  const schemeValidation = yup.object({
+    name: yup
+      .string()
+      .required(t("Please enter your name"))
+      .min(3, t("Please enter at least 3 characters")),
+    phone: yup
+      .string()
+      .required(t("Please enter your phone number"))
+      .matches(
+        /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/,
+        t("Please enter the correct format")
+      )
+      .min(1, t("Please enter your phone number")),
+    // email: yup.string().email("Vui lòng nhập email của bạn"),
+  });
 
   const {
     register,
@@ -59,25 +62,27 @@ const ProductForm = (props) => {
           onSubmit={handleSubmit(submit)}
           className="form-order"
         >
-          <h3 className="form-order__title">Nhập Thông Tin Liên Hệ</h3>
+          <h3 className="form-order__title">
+            {t("Enter Contact Information")}
+          </h3>
 
           <div className="form-order__item">
-            <label htmlFor="name">Tên của bạn</label>
+            <label htmlFor="name">{t("Your name")}</label>
             <input
               {...register("name")}
               id="name"
-              placeholder="Vui lòng nhập họ tên của bạn"
+              placeholder={t("Please enter your first and last name")}
             />
             <span>{errors.name?.message}</span>
           </div>
 
           <div className="form-order__item">
-            <label htmlFor="phone">Số điện thoại</label>
+            <label htmlFor="phone">{t("Phone number")}</label>
 
             <input
               {...register("phone")}
               id="phone"
-              placeholder="Vui lòng nhập số điện thoại của bạn"
+              placeholder={t("Please enter your phone number")}
               type="tel"
             />
 
@@ -96,7 +101,7 @@ const ProductForm = (props) => {
           </div> */}
 
           <button type="submit" className="btn form-btn">
-            Gửi thông tin
+            {t("Send information")}
           </button>
         </form>
 

@@ -25,8 +25,6 @@ function App() {
     // * undefined => mặc định 'vi'
     if (typeof language === "undefined" || !language) {
       setLanguage("vi");
-
-      console.log("First Set Language With VietNam");
     }
 
     // eslint-disable-next-line react-hooks/exhaustive-deps

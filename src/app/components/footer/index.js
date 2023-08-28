@@ -3,16 +3,19 @@ import imageBCT from "../../../assets/images/cobongthuong_chailo.png";
 import { HiLocationMarker } from "react-icons/hi";
 import { BsTelephoneFill } from "react-icons/bs";
 import Copyright from "./Copyright";
+import useTranslation from "hooks/useTranslate/useTranslation";
 
 import "./footer.scss";
 
 export const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="footer">
       <div className="wrapper">
         <div className="footer-content">
           <div className="footer-item">
-            <h3 className="footer-title">Liên hệ</h3>
+            <h3 className="footer-title">{t("Contact")}</h3>
 
             <p className="footer-text">
               <HiLocationMarker></HiLocationMarker>
@@ -28,7 +31,7 @@ export const Footer = () => {
           </div>
 
           <div className="footer-item">
-            <h3 className="footer-title">Theo dõi chúng tôi trên</h3>
+            <h3 className="footer-title">{t("Follow us on")}</h3>
 
             <div className="footer-social">
               {/* <a
@@ -87,7 +90,7 @@ export const Footer = () => {
           </div>
 
           <div className="footer-item">
-            <h3 className="footer-title">Chứng nhận bởi</h3>
+            <h3 className="footer-title">{t("Certified by")}</h3>
             <img
               src={imageBCT}
               alt="Chứng nhận bộ công thương"

@@ -10,14 +10,17 @@ import {
 } from "react-icons/hi";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import useTranslation from "hooks/useTranslate/useTranslation";
 
 import "./styles.scss";
 import "swiper/swiper.min.css";
 
 function IntroService() {
+  const { t } = useTranslation();
+
   const SERVICE_LIST = [
     {
-      title: "Cho thuê xe ôtô",
+      title: "Car rental",
       carousel: () => {
         return (
           <Swiper spaceBetween={50} slidesPerView={1}>
@@ -57,28 +60,28 @@ function IntroService() {
       },
       listItem: [
         {
-          title: "Cho thuê ôtô",
+          title: "Car for rent",
           description:
-            "Chất lượng xe đời mới, hệ thống an toàn, bạn đi đâu cũng được, xe tự lái và có lái.",
+            "New car quality, safety system, you can go anywhere, self-driving and driverless car",
           icon: <HiCurrencyDollar />,
         },
         {
-          title: "Cho thuê xe ô tô 4 - 45 chỗ",
+          title: "Car rental 4 - 45 seats",
           description:
-            "Nội thất xe sang trọng nhằm tạo cho khách hàng cảm giác thoải mái.",
+            "The interior of the car is luxurious to make customers feel comfortable",
           icon: <HiCog />,
         },
         {
-          title: "Hỗ trợ dịch vụ 24/7",
+          title: "24/7 service support",
           description:
-            "Chúng tôi luôn luôn lắng nghe sự góp ý cũng như luôn sẵn sàng giải đáp mọi thắc mắc của quý khách hàng.",
+            "We always listen to your comments and are always ready to answer all your questions",
           icon: <HiClock />,
         },
       ],
       position: "left",
     },
     {
-      title: "Cho thuê xe máy",
+      title: "Motorcycle rental",
       carousel: () => {
         return (
           <Swiper spaceBetween={50} slidesPerView={1}>
@@ -126,28 +129,28 @@ function IntroService() {
       },
       listItem: [
         {
-          title: "Điều kiện thuê xe",
+          title: "Car rental conditions",
           description:
-            "Chỉ cần hộ chiều hoặc CMND là bạn có thể sử hữu ngay 1 chiếc xe đẹp đi chơi thả ga vòng quanh Phú Quốc.",
+            "Just need a household or ID card, you can immediately own a beautiful car to go out and play around Phu Quoc",
           icon: <HiUserCircle />,
         },
         {
-          title: "Xe tay ga và xe số các loại",
+          title: "Scooters and scooters of all kinds",
           description:
-            "Chúng tôi cung cấp đầy đủ mẫu mã màu sắc các loại xe khác nhau của các hãng Honda, Yamaha,…",
+            "We provide a full range of color models of different cars of",
           icon: <HiAdjustments />,
         },
         {
-          title: "Giao xe tận nơi theo yêu cầu",
+          title: "Delivery to the place upon request",
           description:
-            "Dịch vụ giao xe nhanh, thủ tục cho thuê đơn giản, xe luôn luôn được kiểm tra thường xuyên hàng ngày, giá cả rẻ chất lượng không thay đổi, giao xe tại sân bay, bến tàu, khách sạn.",
+            "Fast delivery service, simple rental procedures, cars are always checked regularly every day",
           icon: <HiCheck />,
         },
       ],
       position: "right",
     },
     {
-      title: "Cho thuê khách sạn",
+      title: "Hotel rental",
       carousel: () => {
         return (
           <Swiper spaceBetween={50} slidesPerView={1}>
@@ -194,21 +197,21 @@ function IntroService() {
       },
       listItem: [
         {
-          title: "Điều kiện thuê phòng",
+          title: "Conditions of room rental",
           description:
-            "Chỉ cần hộ chiếu hoặc CMND và thủ tục thuê phòng cực kỳ đơn giản.",
+            "Just a passport or ID card and the procedure for renting a room is extremely simple",
           icon: <HiCheck />,
         },
         {
-          title: "Đa dạng các dịch vụ",
+          title: "Variety of services",
           description:
-            "Chúng tôi cung cấp đầy đủ dịch vụ khách sạn từ phòng đơn đến phòng đôi v.v",
+            "We provide a full range of hotel services from single rooms to double rooms etc",
           icon: <HiCheck />,
         },
         {
-          title: "Nội thất tiện nghi",
+          title: "Comfortable interior",
           description:
-            "Nội thất phòng khách sạn chất lượng cao, phong phú và đáp ứng đầy đủ mọi nhu cầu thiết yếu.",
+            "The hotel room furniture is high quality, rich and fully meets all the essential needs",
           icon: <HiCheck />,
         },
       ],
@@ -218,10 +221,10 @@ function IntroService() {
 
   return (
     <div className="wrapper-service">
-      <h2 className="wrapper-service__title">Giới thiệu</h2>
+      <h2 className="wrapper-service__title">{t("Introduce")}</h2>
 
       <h3 className="wrapper-service__subtitle">
-        Dịch vụ cho thuê xe tham quan và nơi ở tại Phú Quốc
+        {t("Car rental for sightseeing and accommodation in Phu Quoc")}
       </h3>
 
       <div className="wrapper-service__card">
@@ -239,7 +242,7 @@ function IntroService() {
 
               <div className="wrapper-card__text">
                 <h1 className="wrapper-card__text-servicename">
-                  {service.title}
+                  {t(service.title)}
                 </h1>
 
                 {service.listItem.map((serviceItem, idx) => {
@@ -251,11 +254,11 @@ function IntroService() {
 
                       <div>
                         <h3 className="wrapper-card__text-title">
-                          {serviceItem.title}
+                          {t(serviceItem.title)}
                         </h3>
 
                         <p className="wrapper-card__text-desc">
-                          {serviceItem.description}
+                          {t(serviceItem.description)}
                         </p>
                       </div>
                     </div>

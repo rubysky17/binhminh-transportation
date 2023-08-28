@@ -4,10 +4,13 @@ import { getList, getListWithCustomField } from "app/const/firebase";
 
 import CardService from "./components/card";
 import LoadingSkeletonItem from "../loading-skeleton/LoadingSkeletonItem";
+import useTranslation from "hooks/useTranslate/useTranslation";
 
 import "./styles.scss";
 
 function ServiceComponent() {
+  const { t } = useTranslation();
+
   const [isLoadingMenu, setIsLoadingMenu] = useState(false);
   const [isLoadingItem, setIsLoadingItem] = useState(false);
   const [isActiveMenu, setIsActiveMenu] = useState("");
@@ -78,9 +81,9 @@ function ServiceComponent() {
   return (
     <div>
       <div className="wrapper-service">
-        <h2 className="wrapper-service__title">Bảng dịch vụ</h2>
+        <h2 className="wrapper-service__title">{t("Services")}</h2>
 
-        <h3 className="wrapper-service__subtitle">Tiết kiệm đến 50%</h3>
+        <h3 className="wrapper-service__subtitle">{t("Save up to 50%")}</h3>
 
         {isLoadingMenu ? (
           <h2>Đang tải</h2>

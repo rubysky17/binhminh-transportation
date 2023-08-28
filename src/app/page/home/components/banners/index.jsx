@@ -1,16 +1,19 @@
 import React from "react";
 import { HiCheck, HiPhone } from "react-icons/hi";
+import useTranslation from "hooks/useTranslate/useTranslation";
 
 import "./styles.scss";
 
 function BannerBlock() {
+  const { t } = useTranslation();
+
   return (
     <div className="container-fluid wrapper-banner-block">
       <div className="container wrapper-banner-block_content">
         <div className=" wrapper-banner-block__content-text">
           <h2>
-            Thuê xe tự lái, <br />
-            thoải mái vi vu
+            {t("Self_drive_car_rental")}, <br />
+            {t("comfortably")}
           </h2>
 
           <div className="wrapper-banner-block__checklist">
@@ -18,28 +21,28 @@ function BannerBlock() {
               <span className="mr-6">
                 <HiCheck />
               </span>
-              Cho thuê dịch vụ theo ngày
+              {t("Rental service by day")}
             </p>
 
             <p>
               <span className="mr-6">
                 <HiCheck />
               </span>
-              Xe đậu khắp Khu vực
+              {t("Vehicles parked throughout the Area")}
             </p>
 
             <p>
               <span className="mr-6">
                 <HiCheck />
               </span>
-              Giao nhận xe 24/7
+              {t("Car delivery 24/7")}
             </p>
 
             <p>
               <span className="mr-6">
                 <HiCheck />
               </span>
-              Bảo hiểm 2 chiều
+              {t("2-way insurance")}
             </p>
           </div>
 
@@ -48,7 +51,7 @@ function BannerBlock() {
               <HiPhone />
             </span>
 
-            <span>Gọi: 090-1191-314</span>
+            <span>{t("Call")}: 090-1191-314</span>
           </a>
         </div>
 

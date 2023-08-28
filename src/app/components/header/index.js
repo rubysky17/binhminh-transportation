@@ -12,6 +12,7 @@ import Popover from "../popover";
 import VI from "assets/images/vi.png";
 import CN from "assets/images/cn.png";
 import US from "assets/images/us.png";
+import KR from "assets/images/kr.png";
 
 import "./Header.scss";
 
@@ -52,6 +53,10 @@ const Header = () => {
       name: "cn",
       img: CN,
     },
+    {
+      name: "kr",
+      img: KR,
+    },
   ];
 
   const handleTogglePopOver = () => {
@@ -83,7 +88,7 @@ const Header = () => {
                   onClick={() => setShowMenu(false)}
                   activeClassName={`/` === pathname ? "active" : ""}
                 >
-                  Trang Chủ
+                  {t("homepage")}
                 </NavLink>
               </li>
 
@@ -116,7 +121,7 @@ const Header = () => {
                   onClick={() => setShowMenu(false)}
                   activeClassName={`/lien-he` === pathname ? "active" : ""}
                 >
-                  Liên hệ
+                  {t("Contact")}
                 </NavLink>
               </li>
 
@@ -184,8 +189,9 @@ const Header = () => {
                       alt="ngôn ngữ languages"
                       key={idx}
                       onClick={() => {
-                        window.location.reload();
                         setLanguage(lang.name);
+
+                        window.location.reload();
                       }}
                       className="img-flag"
                     />
