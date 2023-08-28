@@ -33,14 +33,13 @@ function Admin() {
         value: "Stt",
         label: "STT",
       },
-      { value: "title", label: "Tên chi tiết" },
+      { value: "title_vi", label: "Tên chi tiết" },
       {
-        value: "category",
+        value: "categoryId",
         label: "Phân loại",
       },
-      { value: "content", label: "Mô tả" },
+      { value: "content_vi", label: "Mô tả" },
       { value: "url", label: "Hình ảnh" },
-      // { value: 'category', label: "Phan loai" },
       { value: "action", label: "Thao tác" },
     ],
   };

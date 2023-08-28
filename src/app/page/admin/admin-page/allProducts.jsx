@@ -9,7 +9,6 @@ import { ADD_PRODUCT, EDIT_PRODUCT } from "./constants";
 import "../styles/allProducts.scss";
 
 const AllProducts = ({ products, columns, products: data }) => {
-  console.log(products, data);
   return (
     <section className="product-section">
       <Table heading="các dịch vụ" columns={columns} data={data} />

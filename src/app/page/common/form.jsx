@@ -13,8 +13,14 @@ function FormComponent({ heading }) {
   let pecentsProgress;
 
   const [dataSubmit, setDataSubmit] = useState({
-    title: "",
-    content: "",
+    title_vi: "",
+    content_vi: "",
+    title_en: "",
+    content_en: "",
+    title_kr: "",
+    content_kr: "",
+    title_cn: "",
+    content_cn: "",
     price: 0,
     unit: "day",
   });
@@ -101,22 +107,27 @@ function FormComponent({ heading }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const { title, content } = dataSubmit;
+    const { title_vi, content_vi } = dataSubmit;
 
     let errorMgs = {};
-
-    if (!title.length) {
+    let category_id = "";
+    if (!title_vi.length) {
       errorMgs.title = "Vui lòng điền tên chi tiết";
     }
 
-    if (!content.length) {
+    if (!content_vi.length) {
       errorMgs.content = "Vui lòng điền mô tả";
+    }
+
+    if (!_.isEmpty(categoryList)) {
+      category_id = categoryList[0].id;
     }
 
     if (_.isEmpty(errorMgs)) {
       const payload = {
         ...dataSubmit,
         img: [...urls],
+        categoryId: category_id,
       };
 
       dispatch(addProductAction(payload));
@@ -157,29 +168,119 @@ function FormComponent({ heading }) {
           </div>
 
           <div className="wrapper-input">
-            <label htmlFor="title">Tên chi tiết</label>
+            <label htmlFor="title_vi">Tên chi tiết (Việt)</label>
 
             <input
-              id="title"
-              name="title"
-              value={dataSubmit.title}
+              id="title_vi"
+              name="title_vi"
+              value={dataSubmit.title_vi}
               onChange={handleChange}
               type="text"
               className="form-control"
             />
 
-            {errors.title && (
-              <div className="alert alert-danger">{errors.title}</div>
+            {errors.title_vi && (
+              <div className="alert alert-danger">{errors.title_vi}</div>
             )}
           </div>
 
           <div className="wrapper-input">
-            <label htmlFor="content">Mô tả</label>
+            <label htmlFor="title_en">Tên chi tiết (Anh)</label>
+
+            <input
+              id="title_en"
+              name="title_en"
+              value={dataSubmit.title_en}
+              onChange={handleChange}
+              type="text"
+              className="form-control"
+            />
+
+            {errors.title_en && (
+              <div className="alert alert-danger">{errors.title_en}</div>
+            )}
+          </div>
+
+          <div className="wrapper-input">
+            <label htmlFor="title_kr">Tên chi tiết (Hàn)</label>
+
+            <input
+              id="title_kr"
+              name="title_kr"
+              value={dataSubmit.title_kr}
+              onChange={handleChange}
+              type="text"
+              className="form-control"
+            />
+
+            {errors.title_kr && (
+              <div className="alert alert-danger">{errors.title_kr}</div>
+            )}
+          </div>
+
+          <div className="wrapper-input">
+            <label htmlFor="title_cn">Tên chi tiết (Trung)</label>
+
+            <input
+              id="title_cn"
+              name="title_cn"
+              value={dataSubmit.title_cn}
+              onChange={handleChange}
+              type="text"
+              className="form-control"
+            />
+
+            {errors.title_cn && (
+              <div className="alert alert-danger">{errors.title_cn}</div>
+            )}
+          </div>
+
+          <div className="wrapper-input">
+            <label htmlFor="content_vi">Mô tả (Việt)</label>
 
             <textarea
-              id="content"
-              name="content"
-              value={dataSubmit.content}
+              id="content_vi"
+              name="content_vi"
+              value={dataSubmit.content_vi}
+              onChange={handleChange}
+              type="text"
+              className="form-control"
+            />
+          </div>
+
+          <div className="wrapper-input">
+            <label htmlFor="content_en">Mô tả (Anh)</label>
+
+            <textarea
+              id="content_en"
+              name="content_en"
+              value={dataSubmit.content_en}
+              onChange={handleChange}
+              type="text"
+              className="form-control"
+            />
+          </div>
+
+          <div className="wrapper-input">
+            <label htmlFor="content_kr">Mô tả (Hàn)</label>
+
+            <textarea
+              id="content_kr"
+              name="content_kr"
+              value={dataSubmit.content_kr}
+              onChange={handleChange}
+              type="text"
+              className="form-control"
+            />
+          </div>
+
+          <div className="wrapper-input">
+            <label htmlFor="content_cn">Mô tả (Trung)</label>
+
+            <textarea
+              id="content_cn"
+              name="content_cn"
+              value={dataSubmit.content_cn}
               onChange={handleChange}
               type="text"
               className="form-control"

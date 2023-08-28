@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import useTranslation from "hooks/useTranslate/useTranslation";
 
 import Lightbox from "react-image-lightbox";
 
@@ -16,10 +17,11 @@ const arrayImages = [
 function GridPicture() {
   const [isOpen, setIsOpen] = useState(false);
   const [photoIndex, setPhotoIndex] = useState(0);
+  const { t } = useTranslation();
 
   return (
     <div className="wrapper-service">
-      <h2 className="wrapper-service__title">Hình ảnh du lịch</h2>
+      <h2 className="wrapper-service__title">{t("Travel images")}</h2>
 
       <div className="grid-container">
         {arrayImages.map((url, idx) => {
