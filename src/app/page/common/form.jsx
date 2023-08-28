@@ -10,8 +10,6 @@ import { Form } from "react-bootstrap";
 import "./styles/form.scss";
 
 function FormComponent({ heading }) {
-  let pecentsProgress;
-
   const [dataSubmit, setDataSubmit] = useState({
     title_vi: "",
     content_vi: "",

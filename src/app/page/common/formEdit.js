@@ -18,10 +18,24 @@ function FormEdit({ heading }) {
     (state) => state.product
   );
   const [dataSubmit, setDataSubmit] = useState({
-    title: "",
-    content: "",
-    categoryId: "",
+    title_vi: "",
+    content_vi: "",
+    title_en: "",
+    content_en: "",
+    title_kr: "",
+    content_kr: "",
+    title_cn: "",
+    content_cn: "",
+    price: 0,
+    unit: "day",
   });
+
+  const unitList = [
+    { name: "Ngày", id: "day" },
+    { name: "Giờ", id: "hour" },
+    { name: "Tháng", id: "month" },
+    { name: "Tuần", id: "week" },
+  ];
 
   const [errors, setErrors] = useState({});
   const [urls, setUrls] = useState([]);
@@ -110,16 +124,22 @@ function FormEdit({ heading }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const { title, content } = dataSubmit;
+    const { title_vi, content_vi } = dataSubmit;
 
     let errorMgs = {};
 
-    if (!title.length) {
-      errorMgs.title = "Vui lòng điền vào trường này";
+    let category_id = "";
+
+    if (!title_vi.length) {
+      errorMgs.title = "Vui lòng điền tên chi tiết";
     }
 
-    if (!content.length) {
-      errorMgs.content = "Vui lòng điền vào trường này";
+    if (!content_vi.length) {
+      errorMgs.content = "Vui lòng điền mô tả";
+    }
+
+    if (!_.isEmpty(categoryList)) {
+      category_id = categoryList[0].id;
     }
 
     if (_.isEmpty(errorMgs)) {
@@ -129,12 +149,11 @@ function FormEdit({ heading }) {
         payload = {
           ...dataSubmit,
           img: [...urls],
-          categoryId: dataSubmit.categoryId || categoryList[0].id,
+          categoryId: dataSubmit.categoryId || category_id,
         };
       }
 
       dispatch(editProductAction(id, payload));
-
       cancelModal();
     } else {
       setErrors({ ...errorMgs });
@@ -160,47 +179,15 @@ function FormEdit({ heading }) {
         ) : (
           <div>
             <form>
-              <div className="form-group">
-                <label htmlFor="title">Tên sản phẩm</label>
-                <input
-                  id="title"
-                  name="title"
-                  value={dataSubmit?.title}
-                  onChange={handleChange}
-                  type="text"
-                  className="form-control"
-                />
-              </div>
-
-              {errors.title && (
-                <div className="alert alert-danger">{errors.title}</div>
-              )}
-
-              <div className="form-group">
-                <label htmlFor="content">Nội dung</label>
-                <textarea
-                  id="content"
-                  name="content"
-                  value={dataSubmit?.content}
-                  onChange={handleChange}
-                  type="text"
-                  className="form-control"
-                />
-              </div>
-
-              {errors.content && (
-                <div className="alert alert-danger">{errors.content}</div>
-              )}
-
-              <div className="form-group">
-                <label htmlFor="content">Loại sản phẩm</label>
+              <div className="wrapper-input">
+                <label htmlFor="content">Loại dịch vụ</label>
 
                 <Form.Select
                   size="lg"
                   className="form-control"
                   name="categoryId"
                   onChange={handleChange}
-                  defaultValue={editProduct.categoryId}
+                  defaultValue={categoryList[0]?.id}
                 >
                   {categoryList.map((item) => {
                     return <option value={item.id}>{item.name}</option>;
@@ -208,24 +195,184 @@ function FormEdit({ heading }) {
                 </Form.Select>
               </div>
 
-              <div className="form-group">
+              <div className="wrapper-input">
+                <label htmlFor="title_vi">Tên chi tiết (Việt)</label>
+
+                <input
+                  id="title_vi"
+                  name="title_vi"
+                  value={dataSubmit.title_vi}
+                  onChange={handleChange}
+                  type="text"
+                  className="form-control"
+                />
+
+                {errors.title_vi && (
+                  <div className="alert alert-danger">{errors.title_vi}</div>
+                )}
+              </div>
+
+              <div className="wrapper-input">
+                <label htmlFor="title_en">Tên chi tiết (Anh)</label>
+
+                <input
+                  id="title_en"
+                  name="title_en"
+                  value={dataSubmit.title_en}
+                  onChange={handleChange}
+                  type="text"
+                  className="form-control"
+                />
+
+                {errors.title_en && (
+                  <div className="alert alert-danger">{errors.title_en}</div>
+                )}
+              </div>
+
+              <div className="wrapper-input">
+                <label htmlFor="title_kr">Tên chi tiết (Hàn)</label>
+
+                <input
+                  id="title_kr"
+                  name="title_kr"
+                  value={dataSubmit.title_kr}
+                  onChange={handleChange}
+                  type="text"
+                  className="form-control"
+                />
+
+                {errors.title_kr && (
+                  <div className="alert alert-danger">{errors.title_kr}</div>
+                )}
+              </div>
+
+              <div className="wrapper-input">
+                <label htmlFor="title_cn">Tên chi tiết (Trung)</label>
+
+                <input
+                  id="title_cn"
+                  name="title_cn"
+                  value={dataSubmit.title_cn}
+                  onChange={handleChange}
+                  type="text"
+                  className="form-control"
+                />
+
+                {errors.title_cn && (
+                  <div className="alert alert-danger">{errors.title_cn}</div>
+                )}
+              </div>
+
+              <div className="wrapper-input">
+                <label htmlFor="content_vi">Mô tả (Việt)</label>
+
+                <textarea
+                  id="content_vi"
+                  name="content_vi"
+                  value={dataSubmit.content_vi}
+                  onChange={handleChange}
+                  type="text"
+                  className="form-control"
+                />
+              </div>
+
+              <div className="wrapper-input">
+                <label htmlFor="content_en">Mô tả (Anh)</label>
+
+                <textarea
+                  id="content_en"
+                  name="content_en"
+                  value={dataSubmit.content_en}
+                  onChange={handleChange}
+                  type="text"
+                  className="form-control"
+                />
+              </div>
+
+              <div className="wrapper-input">
+                <label htmlFor="content_kr">Mô tả (Hàn)</label>
+
+                <textarea
+                  id="content_kr"
+                  name="content_kr"
+                  value={dataSubmit.content_kr}
+                  onChange={handleChange}
+                  type="text"
+                  className="form-control"
+                />
+              </div>
+
+              <div className="wrapper-input">
+                <label htmlFor="content_cn">Mô tả (Trung)</label>
+
+                <textarea
+                  id="content_cn"
+                  name="content_cn"
+                  value={dataSubmit.content_cn}
+                  onChange={handleChange}
+                  type="text"
+                  className="form-control"
+                />
+              </div>
+
+              <div className="wrapper-input">
+                <label htmlFor="price">Giá</label>
+
+                <input
+                  id="price"
+                  name="price"
+                  value={dataSubmit.price}
+                  onChange={handleChange}
+                  type="number"
+                  className="form-control"
+                />
+
+                {errors.price && (
+                  <div className="alert alert-danger">{errors.price}</div>
+                )}
+              </div>
+
+              <div className="wrapper-input">
+                <label htmlFor="unit">Đơn vị tính</label>
+
+                <Form.Select
+                  size="lg"
+                  className="form-control"
+                  name="unit"
+                  onChange={handleChange}
+                  defaultValue={unitList[0]?.id}
+                >
+                  {unitList.map((item) => {
+                    return <option value={item.id}>{item.name}</option>;
+                  })}
+                </Form.Select>
+              </div>
+
+              <div>
                 <label className="choose-file" htmlFor="image">
                   <i className="fa-solid fa-arrow-up-from-bracket"></i>
                   Tải hình ảnh từ máy tính
                 </label>
+
                 <input
                   id="image"
                   type="file"
                   multiple
                   onChange={handleChangeFile}
-                  accept="image/png, image/jpg, image/jpeg"
+                  hidden
+                  accept="image/png, image/jpg, image/jpeg,image/*"
                 />
               </div>
+
+              <span className="message-file">
+                {urls.length !== 0 ? `Đã chọn ${urls.length} ảnh` : ""}
+              </span>
 
               {errors.files && (
                 <div className="alert alert-danger">{errors.files}</div>
               )}
             </form>
+
             <div className="row files-box">
               {(urls.length === 0 ? true : false) && (
                 <div className="content">
