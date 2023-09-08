@@ -46,12 +46,12 @@ function BannerBlock() {
             </p>
           </div>
 
-          <a className="wrapper-banner-block__callbtn" href="tel:+84901191314">
+          <a className="wrapper-banner-block__callbtn" href="tel:+84911191314">
             <span className="mr-6">
               <HiPhone />
             </span>
 
-            <span>{t("Call")}: 090-1191-314</span>
+            <span>{t("Call")}: 0911-19-13-14</span>
           </a>
         </div>
 

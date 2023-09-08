@@ -2,7 +2,7 @@ import React from "react";
 
 import "./Contact.scss";
 
-export const phoneNumber = "0901191314";
+export const phoneNumber = "0911191314";
 
 export const Contact = () => {
   return (
