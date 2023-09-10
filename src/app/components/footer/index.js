@@ -59,7 +59,7 @@ export const Footer = () => {
               </a> */}
 
               <a
-                href="https://zalo.me/0911191314"
+                href="https://zalo.me/0918868869 "
                 target="_blank"
                 rel="noreferrer"
               >
